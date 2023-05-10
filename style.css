@@ -1,0 +1,438 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --h1-size: 2.5rem; /* velikost H1 v jednotkách Rem */
+  --h2-size: 2rem; /* velikost H2 v jednotkách Rem */
+  --h3-size: 1.5rem; /* velikost H3 v jednotkách Rem */
+}
+
+h1 {
+  font-size: var(--h1-size);
+}
+
+h2 {
+  font-size: var(--h2-size);
+}
+
+h3 {
+  font-size: var(--h3-size);
+}
+
+:root {
+  --primary-color: #ffffff; /* hlavní barva */
+  --secondary-color: #ababab; /* vedlejší barva */
+  --text-color: #ffffff; /* barva textu */
+  --background-color: rgb(39, 39, 39); /* barva pozadí */
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+}
+
+a {
+  color: var(--secondary-color);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+h1, h2 {
+    font-family: 'Open sans' Regular 400;
+  }
+
+
+.text{
+    color: white;
+}
+
+.container2 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 20px);
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* grid o 6-12 sloupcích */
+  grid-template-rows: repeat(auto-fit, minmax(50px, 1fr)); /* 3-4 řádky */
+  grid-gap: 10px;
+  align-items: center;
+  justify-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); /* grid o 3-6 sloupcích */
+    grid-template-rows: repeat(2, minmax(50px, 1fr)); /* 2-6 řádky */
+  }
+}
+
+header .logo {
+  grid-column-end: span 2; /* jeden z prvků zabírá alespoň 2 sloupce na PC */
+  grid-row-end: span 2;
+  color: white;
+}
+
+header .menu {
+  grid-column-end: span 1;
+  grid-row-end: span 1;
+  color: white;
+}
+
+header .search {
+  grid-column-end: span 1;
+  grid-row-end: span 1;
+  color: white;
+}
+
+header .user {
+  grid-column-end: span 1;
+  grid-row-end: span 1;
+  color: white;
+}
+
+header .cart {
+  grid-column-end: span 1;
+  grid-row-end: span 1;
+  color: white;
+}
+
+header h1 {
+  grid-column: 2 / -2; /* název stránky na druhém, třetím nebo čtvrtém řádku na PC */
+  text-align: center;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  header h1 {
+    grid-column: 1 / -1; /* název stránky na prvním řádku na mobilu */
+  }
+}
+
+header .fa {
+  font-size: 1.5rem;
+  margin: 0 5px;
+}
+
+.nav {
+  color: black;
+  font-size: 50px;
+  position: sticky;
+  width: 100%;
+  z-index: 1;
+  background-color: darkblue;
+  color: white;
+}
+
+.nav2 {
+  width: 90%;
+  justify-content: space-between;
+  margin: auto;
+  display: flex;
+  max-width: 1000px;
+}
+
+nav li {
+  display: inline-block;
+}
+
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  background-color: darkblue;
+}
+
+li {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+li > a {
+  text-decoration: none;
+  font-size: 20px;
+  color: aliceblue;
+}
+
+li > a:hover {
+  color: rgb(183, 183, 183);
+  text-decoration: underline;
+}
+
+.gallery-area img {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.single-gallery-image {
+  margin-top: 30px;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  height: 200px;
+}
+
+.section-gap {
+  padding: 120px 0;
+}
+
+.kytara{
+  position: absolute;
+  font-size: 40px;
+  right: 50px;
+}
+
+.burt{
+  position: absolute;
+  font-size: 40px;
+  left: 50px;
+}
+
+.gang{
+  position: absolute;
+  font-size: 40px;
+  left: 100px;
+}
+
+main {
+  height: 200;
+  max-width: 1000px;
+  }
+  section {
+    flex: 1 1 auto;
+    padding: 0 10px;
+  }
+  img {
+    max-width: 100%;
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+  aside {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .container {
+    display: flex;
+  }
+  
+  .sekce-obrazek{
+    flex: 0 1 25%;
+    width: 100%;
+  }
+
+  nav {
+    background-color: aquamarine;
+    padding: 6px;
+  }
+  
+  .logo {
+    padding: 6px;
+  }
+  
+  .navigace {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .menu {
+    background-color: rgb(0, 68, 195);
+    padding: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .menu-polozky {
+    list-style-type: none;
+  }
+  
+  main {
+    padding: 6px;
+  }
+  
+  .skryte {
+    display: none;
+  }
+  
+  @media only screen and (min-width:600px) {
+    nav {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .menu {
+      display: none;
+    }
+  
+    .menu-polozky {
+      display: block;
+      margin: 0;
+      padding: 6px;
+    }
+  
+    .menu-polozky li {
+      display: inline-block;
+      padding-left: 12px;
+    }
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* grid o minimálně 3 sloupcích */
+    grid-gap: 0px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr); /* grid o maximálně 2 sloupcích */
+    }
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .gallery img:nth-child(1),
+  .gallery img:nth-child(2) {
+    grid-row-end: span 2; /* první dva obrázky zabírají 2 buňky v desktop verzi */
+  }
+
+  .galerie {
+    display: grid;
+    gap: 6px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 500px);
+  }
+
+  .obrazek {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  @media only screen and (max-width: 780px) {
+    .galerie {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 250px);
+      grid-auto-flow: dense;
+    }
+  }
+
+
+  form {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+  }
+  
+  form > input, form > button {
+    padding: 6px;
+    border: 4px solid rgb(0, 68, 195);
+    font-size: 32px;
+  }
+  
+  form > input[type=text] {
+    flex: 0 1 100%;
+    color: rgb(0, 68, 195);
+    border-radius: 12px 0 0 12px;
+  }
+  
+  form > input[type=text]:focus {
+    background-color: lavender;
+    outline: none;
+  }
+  
+  form > button {
+    flex: 0 0 80px;
+    background-color: rgb(0, 68, 195);
+    color: white;
+    border-radius: 0 12px 12px 0;
+    cursor: pointer;
+  }
+
+  .term {
+    margin: auto;
+    display: flex;
+  }
+
+  .stred {
+    text-align: center;
+  }
+
+  /* popup */
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .popup-content h2 {
+    margin-top: 0;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"], .close-btn {
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+  
+  button[type="submit"] {
+    background: linear-gradient(to bottom right, #ff416c, #ff4b2b);
+    margin-right: 10px;
+  }
+  
+  .close-btn {
+    background-color: #333;
+  }
+  
+  .close-btn:hover, button[type="submit"]:hover {
+    opacity: 0.8;
+  }
+  
+  .popup.hidden {
+    display: none;
+  }
+  
